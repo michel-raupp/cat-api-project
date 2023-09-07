@@ -2,11 +2,15 @@
 import { styled } from "styled-components"
 
 export const StyledHamburguer = styled.div`
-  width: 65px;
-  height: 65px;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgb(0, 122, 255);
+  
+
 
 
 /* <style for menu__icon> ======== */
@@ -24,7 +28,7 @@ export const StyledHamburguer = styled.div`
   width: 100%;
   height: 0.125rem;
   border-radius: 0.125rem;
-  background-color: rgb(0, 122, 255);
+  background-color: #fff;
   transition: transform .4s, background-color .4s, width .4s, opacity .4s;
 }
 
