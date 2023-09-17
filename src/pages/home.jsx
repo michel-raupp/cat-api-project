@@ -10,6 +10,7 @@ import { fetchCatBreeds } from '../data/'
 import BreedInfo from '../../src/components/cat-info/index';
 import SkillBar, { SkillBarWrapper } from '../../src/components/skills';
 import DropdownSelector from '../../src/components/buttons';
+import Logout from '../components/buttons/logout';
 
 axios.defaults.baseURL = 'https://api.thecatapi.com/v1';
 axios.defaults.headers.common['x-api-key'] = 'live_P1KXG6df5bosokP8OBESWnFiDYk55D8zxNnCbzp46cfQmgKpO2AFaC0ILbScxdT8';

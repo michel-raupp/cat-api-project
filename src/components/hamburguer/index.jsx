@@ -1,5 +1,6 @@
 
 import { styled } from "styled-components"
+import Logout from "../buttons/logout";
 
 export const StyledHamburguer = styled.div`
   padding: 10px;
@@ -60,6 +61,7 @@ function Hamburguer() {
                 <span></span>
                 <span></span>
             </button>
+            <Logout/>
         </StyledHamburguer>
     )
 }

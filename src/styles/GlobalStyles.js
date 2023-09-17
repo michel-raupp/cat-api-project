@@ -101,6 +101,10 @@ h1, h2, h3, h4, p, div{
     width: 20px;
     display: flex;
 }
+button{
+	background-color: red;
+	color: #fff;
+}
 `;
 
 export default GlobalStyle;
