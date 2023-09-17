@@ -110,3 +110,10 @@ font-weight: 400;
         text-decoration: none !important;
     }
 `
+
+export const Screen = styled(Flex)`
+flex-direction: column;
+width: calc(100% - 20px);
+margin: auto auto;
+padding-bottom: 100px;
+`

@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../src/App.css';
 import Header from '../../src/components/header/index';
-import { Button, Hero, SliderContainer } from '../../src/styles/styles';
+import { Button, Hero, Screen, SliderContainer } from '../../src/styles/styles';
 import { fetchCatBreeds } from '../data/'
 import BreedInfo from '../../src/components/cat-info/index';
 import SkillBar, { SkillBarWrapper } from '../../src/components/skills';
@@ -100,6 +100,7 @@ class Home extends Component {
     return (
       <>
         <Header></Header>
+        <Screen>
         <Hero>
           <div className="dropdown-wrapper">
             <h2>
@@ -152,6 +153,7 @@ class Home extends Component {
           breedOptions={breedOptions}
           onSelectChange={this.handleSelectChange} // Passa a função para atualizar a seleção
         /> */}
+      </Screen>
       </>
     );
   }

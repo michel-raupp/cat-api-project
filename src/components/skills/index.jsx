@@ -6,6 +6,7 @@ import { Flex } from "../../styles/styles";
 export const SkillBarWrapper = styled(Flex)`
 margin: 40px 0;
     gap: 10px;
+    width: 100%;
     flex-direction: column;
 `
 
@@ -17,7 +18,7 @@ width: 100%;
     height: 8px;
     border-radius: 8px;
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     background-color: #2C2E34;
 }
 .bar{
