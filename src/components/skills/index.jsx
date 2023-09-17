@@ -17,7 +17,7 @@ width: 100%;
     height: 8px;
     border-radius: 8px;
     width: 100%;
-    max-width: 230px;
+    max-width: 280px;
     background-color: #2C2E34;
 }
 .bar{
@@ -25,6 +25,10 @@ width: 100%;
     border-radius: 8px;
     max-width: 400px;
     background-color: #13B366;
+}
+.skill-label{
+    font-weight: 200;
+    font-size: 12px;
 }
 `
 
@@ -39,6 +43,7 @@ function SkillBar({ label, value }) {
                 <div className="bar" style={{ width: width }}></div>
             </div>
         </StyledSkillBar>
+        
     );
 }
 

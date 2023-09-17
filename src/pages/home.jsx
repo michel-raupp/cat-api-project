@@ -5,8 +5,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../src/App.css';
 import Header from '../../src/components/header/index';
-import { Hero, SliderContainer } from '../../src/styles/styles';
-import  {fetchCatBreeds} from '../data/'
+import { Button, Hero, SliderContainer } from '../../src/styles/styles';
+import { fetchCatBreeds } from '../data/'
 import BreedInfo from '../../src/components/cat-info/index';
 import SkillBar, { SkillBarWrapper } from '../../src/components/skills';
 import DropdownSelector from '../../src/components/buttons';
@@ -45,6 +45,7 @@ class Home extends Component {
     console.log("Breed Selected. ID:", e.target.value)
     await this.setState({ selected_breed: e.target.value });
     await this.loadBreedImages();
+
   }
 
   async componentDidMount() {
@@ -74,6 +75,7 @@ class Home extends Component {
   getSelectedBreedInfo() {
     const selectedBreed = this.state.selected_breed;
     console.log("qual foi:", selectedBreed)
+   
     return this.state.breeds.find(breed => breed.id === selectedBreed);
   }
 
@@ -142,7 +144,9 @@ class Home extends Component {
             </>
           )}
         </SkillBarWrapper>
-
+        {breedInfo && (
+          <Button><a href={breedInfo.wikipedia_url} >Wikipedia</a></Button>
+        )}
         {/* <DropdownSelector selectedBreed={sliderSettings}
           breedOptions={breedOptions}
           onSelectChange={this.handleSelectChange} // Passa a função para atualizar a seleção

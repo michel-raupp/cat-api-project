@@ -9,25 +9,40 @@ align-items: flex-start;
 width: 100%;
 max-width: 400px;
 margin: 0 auto;
-gap: 10px;
+gap: 24px;
 
-h3, h4{
-    font-size: 16px;
+h3{
+    font-size: 18px;
     font-weight: 600;
 }
-h4{
-    color: #0084ff;
-}
+
 
 .personalidade{
-border: 1px solid #ccc;
-border-radius: 8px;
-padding: 8px;
-margin: 10px 0;
+    font-size: 14px;
+font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 50px;
+
+    background-color: #2C2E34;
+    color: #fff;
+
 }
 
-p.description, .skill-label{
-    font-size: 12px;  
+.temperament{
+    font-weight: 200;
+    background-color: transparent;
+    border: 1px solid #2c2e34;
+}
+.personalidade-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+p.description{
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 200;
 }
 `
 
@@ -37,9 +52,14 @@ function BreedInfo({ breed }) {
             {breed && (
                 <>
                     <h3>{breed.name}</h3>
-                    <h4>{breed.origin}</h4>
+                    <div className="personalidade-wrapper">
+                        <p className="personalidade">{breed.origin}</p>
 
-                    <p className="personalidade">{breed.temperament}</p>
+                        <p className="personalidade">{breed.weight.metric} kg</p>
+                        <p className="personalidade"> {breed.life_span} years</p>
+
+                        <p className="personalidade temperament">{breed.temperament}</p>
+                    </div>
                     <p className="description"> {breed.description}</p>
                 </>
             )}

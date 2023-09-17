@@ -21,14 +21,18 @@ margin-top: 10px;
         max-width: 400px;
         padding: 0 10px;
         z-index: 3;
+
+        position: absolute;
+        top: 60px;
     }
 
     .dropdown{
         color: #fff;
         border: 1px solid #7D7D7D;
-    background: #121212;
+        background: #12121278;
     border-radius: 4px;
     padding: 4px;
+    backdrop-filter: blur(3px);
 
     }
 
@@ -90,3 +94,19 @@ export const SliderContainer = styled.div`
     z-index: 1;
 }
   `
+export const Button = styled(Flex)`
+  font-size: 14px;
+font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #007aff;
+   margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+
+    a{
+        color: #fff;
+        text-decoration: none !important;
+    }
+`

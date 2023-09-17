@@ -8,7 +8,7 @@ export const StyledHamburguer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 122, 255);
+  background-color: #007aff;
   
 
 
