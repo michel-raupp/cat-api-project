@@ -20,10 +20,14 @@ h4{
 }
 
 .personalidade{
-border: 1px solid #000;
+border: 1px solid #ccc;
 border-radius: 8px;
 padding: 8px;
 margin: 10px 0;
+}
+
+p.description, .skill-label{
+    font-size: 12px;  
 }
 `
 
