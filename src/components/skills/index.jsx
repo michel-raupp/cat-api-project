@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { styled } from "styled-components";
-import { Flex } from "../../styles/styles";
+import { Colors, Flex } from "../../styles/styles";
 
 
 export const SkillBarWrapper = styled(Flex)`
@@ -19,13 +19,13 @@ width: 100%;
     border-radius: 8px;
     width: 100%;
     max-width: 260px;
-    background-color: #2C2E34;
+    background-color:  ${Colors.grey};
 }
 .bar{
     height: 8px;
     border-radius: 8px;
     max-width: 400px;
-    background-color: #13B366;
+    background-color:  ${Colors.green};
 }
 .skill-label{
     font-weight: 200;

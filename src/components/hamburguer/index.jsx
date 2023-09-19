@@ -1,20 +1,40 @@
 
 import { styled } from "styled-components"
 import Logout from "../buttons/logout";
-
-export const StyledHamburguer = styled.div`
+import logo from "../../assets/icons/cat-icon.svg"
+import { Colors } from "../../styles/styles";
+export const StyledHeader = styled.div`
   padding: 10px;
   width: 100%;
-  height: 40px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+
+  background-color: ${Colors.primary};
+ 
+.header-wrapper{
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #007aff;
-  
+  padding: 0 10px;
+}
 
+.logo-wrapper{
+  display: flex;
+  gap: 16px;
+  align-items: center;
 
+  h1{
+    font-size: 16;
+  }
+}
 
-/* <style for menu__icon> ======== */
 .menu__icon {
   width: 28px;
   height: 28px;
@@ -29,7 +49,7 @@ export const StyledHamburguer = styled.div`
   width: 100%;
   height: 0.125rem;
   border-radius: 0.125rem;
-  background-color: #fff;
+  background-color: ${Colors.white};
   transition: transform .4s, background-color .4s, width .4s, opacity .4s;
 }
 
@@ -54,16 +74,24 @@ export const StyledHamburguer = styled.div`
 `
 
 function Hamburguer() {
-    return (
-        <StyledHamburguer>
-            <button className="menu__icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <Logout/>
-        </StyledHamburguer>
-    )
+  return (
+    <StyledHeader>
+      <div className="header-wrapper">
+        <div className="logo-wrapper">
+          <img src={logo} alt="cat-logo" />
+          <h1>The Cat Facts</h1>
+        </div>
+        {/* <button className="menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button> */}
+
+      
+      <Logout />
+      </div>
+    </StyledHeader>
+  )
 }
 
 export default Hamburguer;

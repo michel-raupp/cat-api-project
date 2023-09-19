@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Colors } from "./styles";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,7 +69,7 @@ button {
 }
 
 body{
-	background-color: #171616;
+	background-color: ${Colors.black};
 }
 
 h1, h2, h3, h4, p, div{
@@ -76,35 +77,6 @@ h1, h2, h3, h4, p, div{
     line-height: 1.2;
 }
 
-.slick-dots li button:before{
-	opacity: 1;
-	color: #4b4848;
-	font-size: 10px;
-}
-.slick-dots li.slick-active button:before{
-	color: #fff;
-	font-family: 'slick';
-    font-size: 10px;
-	opacity: 1;
-}
-.slick-prev:before, .slick-next:before {
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    border-radius: 50%;
-    background: #fff;
-    color: #222;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 19px;
-    width: 20px;
-    display: flex;
-}
-button{
-	background-color: red;
-	color: #fff;
-}
-`;
+`
 
 export default GlobalStyle;

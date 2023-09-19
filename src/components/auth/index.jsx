@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+/* eslint-disable react/prop-types */
+import  { createContext, useContext, useEffect, useState } from 'react';
 
 // Crie um contexto de autenticação
 const AuthContext = createContext();

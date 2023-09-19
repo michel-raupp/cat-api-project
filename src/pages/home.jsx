@@ -5,12 +5,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../src/App.css';
 import Header from '../../src/components/header/index';
-import { Button, Hero, Screen, SliderContainer } from '../../src/styles/styles';
+import { Button, Hero, Screen, SliderContainer, StyledHome } from '../../src/styles/styles';
 import { fetchCatBreeds } from '../data/'
 import BreedInfo from '../../src/components/cat-info/index';
 import SkillBar, { SkillBarWrapper } from '../../src/components/skills';
-import DropdownSelector from '../../src/components/buttons';
-import Logout from '../components/buttons/logout';
+
 
 axios.defaults.baseURL = 'https://api.thecatapi.com/v1';
 axios.defaults.headers.common['x-api-key'] = 'live_P1KXG6df5bosokP8OBESWnFiDYk55D8zxNnCbzp46cfQmgKpO2AFaC0ILbScxdT8';
@@ -95,10 +94,10 @@ class Home extends Component {
   render() {
     const sliderSettings = this.getSliderSettings();
     const breedInfo = this.getSelectedBreedInfo();
-    const breedOptions = this.getBreedOptions();
+
 
     return (
-      <>
+      <StyledHome>
         <Header></Header>
         <Screen>
         <Hero>
@@ -154,7 +153,7 @@ class Home extends Component {
           onSelectChange={this.handleSelectChange} // Passa a função para atualizar a seleção
         /> */}
       </Screen>
-      </>
+      </StyledHome>
     );
   }
 }

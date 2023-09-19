@@ -1,51 +1,55 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../components/auth';
-import { Link, useNavigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
+import { StyledInput } from '../components/input';
+import { Button, Flex, StyledLogin } from '../styles/styles';
+import logo from "../assets/icons/cat-icon.svg"
 function Login() {
-  const { setAuthenticated } = useAuth(); // Use o contexto de autenticação
-  const navigate = useNavigate(); // Obtenha a função de navegação
+  const { setAuthenticated } = useAuth();
+  const navigate = useNavigate(); 
 
-  const [email, setEmail] = useState('');
+  const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Aqui você pode adicionar lógica de autenticação.
-    // Neste exemplo, estamos apenas verificando se o email e senha são iguais a "admin".
-    if (email === 'admin' && password === 'senha') {
-      setAuthenticated(true); // Define o estado de autenticação como verdadeiro
-      navigate('/cats'); // Use a função navigate para redirecionar
+
+    if (user === 'admin' && password === '123') {
+      setAuthenticated(true); 
+      navigate('/cats'); 
 
     } else {
-      setAuthenticated(false); // Define o estado de autenticação como falso
-      alert('Credenciais incorretas. Tente novamente.');
+      setAuthenticated(false);
+      alert('User or Password wrong, try again!');
     }
   };
 
   return (
-    <div>
-      <h2>Tela de Login</h2>
-      <div>
-        <label>Email:</label>
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <StyledLogin>
+      <div className='bg'>
+        <img src={logo} alt="cat-logo" />
+        <h2>The Cat Facts</h2>
+        <p>All about cats!</p>
+        <Flex isCollum="yes">
+
+
+          <StyledInput
+            type="text"
+            placeholder='user'
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+          />
+
+          <StyledInput
+            type="password"
+            placeholder='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <Button isLogin="yes" onClick={handleLogin}>Login</Button>
+        </Flex>
       </div>
-      <div>
-        <label>Senha:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <div>
-        <button onClick={handleLogin}>Login</button>
-      </div>
-      
-    </div>
+    </StyledLogin>
   );
 }
 

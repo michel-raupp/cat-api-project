@@ -1,10 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../auth";
+import { Button } from "../../styles/styles";
 
 function Logout() {
 
     const { setAuthenticated } = useAuth(); // Use o contexto de autenticação
-    const navigate = useNavigate(); // Obtenha a função de navegação
 
 
     const handleLogout = () => {
@@ -13,7 +12,7 @@ function Logout() {
 
     };
     return (
-        <button onClick={handleLogout}>Logout</button>
+        <Button isLogout="true" onClick={handleLogout}>Logout</Button>
     )
 
 }

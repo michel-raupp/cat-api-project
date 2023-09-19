@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { styled } from "styled-components";
-import { Flex } from "../../styles/styles";
+import { Colors, Flex } from "../../styles/styles";
 
 const StyledBreedInfo = styled(Flex)`
 flex-direction: column;
@@ -23,15 +23,15 @@ font-weight: 400;
     padding: 8px 16px;
     border-radius: 50px;
 
-    background-color: #2C2E34;
-    color: #fff;
+    background-color: ${Colors.grey};
+    color: ${Colors.white};
 
 }
 
 .temperament{
     font-weight: 200;
     background-color: transparent;
-    border: 1px solid #2c2e34;
+    border: 1px solid ${Colors.grey};
 }
 .personalidade-wrapper{
     display: flex;

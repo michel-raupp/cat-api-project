@@ -1,9 +1,30 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
+import background from "../assets/background.png"
+
+
+export const Colors = {
+
+    primary: '#163FCF',
+    green: '#13B366',
+    black: '#171616',
+    white: '#fff',
+    grey: '#2C2E34',
+
+}
+
 
 export const Flex = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    
+    ${props =>
+        props.isCollum &&
+        css`
+    width: 100%;
+    flex-direction: column;
+    `};
 `
 export const Hero = styled(Flex)`
 margin-top: 10px;
@@ -27,7 +48,7 @@ margin-top: 10px;
     }
 
     .dropdown{
-        color: #fff;
+        color:  ${Colors.white};
         border: 1px solid #7D7D7D;
         background: #12121278;
     border-radius: 4px;
@@ -100,15 +121,34 @@ font-weight: 400;
     padding: 8px 16px;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #007aff;
+    background-color:  ${Colors.primary};
    margin: 0 auto;
     width: 100%;
     max-width: 400px;
 
     a{
-        color: #fff;
+        color:  ${Colors.white};
         text-decoration: none !important;
     }
+
+    ${props =>
+        props.isLogout &&
+        css`
+    width: min-content ;
+    margin: unset ;
+
+      background-color:  ${Colors.grey};;
+    `};
+
+    ${props =>
+        props.isLogin &&
+        css`
+        margin-top: 12px;
+    max-width: 220px;
+    `};
+
+   
+
 `
 
 export const Screen = styled(Flex)`
@@ -116,4 +156,75 @@ flex-direction: column;
 width: calc(100% - 20px);
 margin: auto auto;
 padding-bottom: 100px;
+`
+
+export const StyledHome = styled(Flex)`
+    flex-direction: column;
+
+.slick-dots li button:before{
+	opacity: 1;
+	color: #4b4848;
+	font-size: 10px;
+}
+.slick-dots li.slick-active button:before{
+	color:  ${Colors.white};
+	font-family: 'slick';
+    font-size: 10px;
+	opacity: 1;
+}
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    border-radius: 50%;
+    background:  ${Colors.white};
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 19px;
+    width: 20px;
+    display: flex;
+}
+button{
+	
+	color:  ${Colors.white};
+}
+`
+
+export const StyledLogin = styled(StyledHome)`
+    height: 68vh;
+.bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+   .bg::before{
+content: "";
+    width: 400px;
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center;
+    height: 711px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
+    z-index: -1;
+    }
+    img{
+        width: 145px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    p{
+        font-size: 12px;
+        font-weight: 200;
+        margin-bottom: 40px;
+    }
 `
