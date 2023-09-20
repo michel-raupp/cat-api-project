@@ -29,7 +29,7 @@ function Login() {
         <img src={logo} alt="cat-logo" />
         <h2>The Cat Facts</h2>
         <p>All about cats!</p>
-        <Flex isCollum="yes">
+        <Flex iscollum="yes">
 
 
           <StyledInput
@@ -46,7 +46,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <Button isLogin="yes" onClick={handleLogin}>Login</Button>
+          <Button islogin="yes" onClick={handleLogin}>Login</Button>
         </Flex>
       </div>
     </StyledLogin>

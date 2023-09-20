@@ -20,7 +20,7 @@ export const Flex = styled.div`
 
     
     ${props =>
-        props.isCollum &&
+        props.iscollum &&
         css`
     width: 100%;
     flex-direction: column;
@@ -132,7 +132,7 @@ font-weight: 400;
     }
 
     ${props =>
-        props.isLogout &&
+        props.islogout &&
         css`
     width: min-content ;
     margin: unset ;
@@ -141,10 +141,18 @@ font-weight: 400;
     `};
 
     ${props =>
-        props.isLogin &&
+        props.islogin &&
         css`
         margin-top: 12px;
     max-width: 220px;
+    `};
+
+    ${props =>
+        props.isdelete &&
+        css`
+        margin-top: 12px;
+    max-width: 220px;
+    background-color: #cf1638;
     `};
 
    
@@ -226,5 +234,55 @@ content: "";
         font-size: 12px;
         font-weight: 200;
         margin-bottom: 40px;
+    }
+
+    .messages{
+        overflow-y: auto;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 4px;
+        border: 1px solid ${Colors.grey};
+        padding: 50px 10px;
+        h3{
+            font-weight: 600;
+            font-size: 28px;
+        }
+        ul{
+           gap: 30px;
+      
+            
+        }
+    }
+
+    .messages div{
+        width: 100%;
+            gap: 20px; 
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid ${Colors.grey};
+    }
+
+    li{
+        max-width: 400px;
+        width: 100%;
+    
+
+    }
+
+    .messages:has(:not(div)){
+       display: none;
+    }
+    .messages:has(div){
+       display: flex;
     }
 `

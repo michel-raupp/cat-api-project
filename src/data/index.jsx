@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+// Import the functions you need from the SDKs you need
+
+
 
 export const fetchCatBreeds = async () => {
     const apiUrl = 'https://api.thecatapi.com/v1/breeds';
@@ -12,4 +16,6 @@ export const fetchCatBreeds = async () => {
         throw new Error('Ocorreu um erro:', error);
     }
 };
+
+
 
