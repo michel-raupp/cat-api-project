@@ -3,6 +3,7 @@ import { styled } from "styled-components"
 import Logout from "../buttons/logout";
 import logo from "../../assets/icons/cat-icon.svg"
 import { Colors } from "../../styles/styles";
+import ContactButton from "../buttons/contact-button";
 export const StyledHeader = styled.div`
   padding: 10px;
   width: 100%;
@@ -77,18 +78,20 @@ function Hamburguer() {
   return (
     <StyledHeader>
       <div className="header-wrapper">
+        <a href="/cats">
         <div className="logo-wrapper">
           <img src={logo} alt="cat-logo" />
           <h1>The Cat Facts</h1>
         </div>
+        </a>
         {/* <button className="menu__icon">
           <span></span>
           <span></span>
           <span></span>
         </button> */}
 
-      
-      <Logout />
+        <ContactButton />
+        <Logout />
       </div>
     </StyledHeader>
   )

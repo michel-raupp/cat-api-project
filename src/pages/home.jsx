@@ -98,7 +98,7 @@ class Home extends Component {
 
     return (
       <StyledHome>
-        <Header></Header>
+        <Header/>
         <Screen>
         <Hero>
           <div className="dropdown-wrapper">

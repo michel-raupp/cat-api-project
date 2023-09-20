@@ -155,6 +155,16 @@ font-weight: 400;
     background-color: #cf1638;
     `};
 
+    ${props =>
+        props.iscontact &&
+        css`
+        margin: 0;
+        padding: 7px 16px;
+        border: 1px solid #fff;
+    max-width: min-content;
+    background-color: transparent;
+    `};
+
    
 
 `

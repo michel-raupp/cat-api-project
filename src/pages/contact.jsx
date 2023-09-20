@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, deleteDoc, doc, getDocs, getFirestore } from "firebase/firestore"
 import { getAnalytics } from "firebase/analytics";
+import Header from '../components/header';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -67,7 +68,10 @@ const Contact = () => {
 
 
     return (
+        <>
+        <Header/>
         <StyledLogin>
+              
             <div className='bg'>
                 <img src={logo} alt="cat-logo" />
                 <h2>Contact Form</h2>
@@ -110,6 +114,7 @@ const Contact = () => {
                 </Flex>
             </div>
         </StyledLogin>
+        </>
     );
 }
 
